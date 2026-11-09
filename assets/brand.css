@@ -1,0 +1,78 @@
+/* TECLOOK · capa de marca (Manual TECLOOK 1.0): Montserrat + Space Mono, logo oficial.
+   Las fuentes van alojadas en el sitio (sin llamadas a Google Fonts). */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/montserrat-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/montserrat-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face { font-family: "Space Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/space-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Space Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/space-mono-latin-700-normal.woff2") format("woff2"); }
+
+:root {
+  --font: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --mut: #b3b3b3;
+}
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-weight: 450;
+  line-height: 1.7;
+  letter-spacing: .005em;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3 { font-feature-settings: "kern", "liga"; }
+h1 { letter-spacing: -.045em; }
+h2 { font-weight: 800; letter-spacing: -.03em; line-height: 1.08; }
+h3 { letter-spacing: -.012em; }
+.lead { font-weight: 450; line-height: 1.75; }
+.hero .tag { font-weight: 700; letter-spacing: -.02em; line-height: 1.2; }
+.hero h1 { font-weight: 900; letter-spacing: -.05em; }
+.close h2 { letter-spacing: -.045em; }
+.btn { font-weight: 800; letter-spacing: .01em; }
+
+/* Space Mono para etiquetas técnicas, como pide el manual de marca */
+.eyebrow, .lab, .hero .triad, .price .off, .pack .flag, .pack .name, .hooks .bono, .big small, .deadline b, .until, .fine {
+  font-family: var(--mono);
+}
+.eyebrow { font-weight: 700; letter-spacing: .16em; font-size: 11.5px; }
+.pack .name { font-weight: 700; letter-spacing: .16em; }
+.hooks .bono { font-weight: 700; }
+.big small { letter-spacing: .04em; font-weight: 700; }
+
+/* Marca: logo oficial + palabra "Teclook" (manual, p. 5) */
+.brand { display: inline-flex; align-items: center; gap: 10px; letter-spacing: 0; font-weight: 800; font-size: 20px; line-height: 1; }
+.brand img { width: 34px; height: auto; display: block; }
+.brand .wm { letter-spacing: -.04em; }
+.brand b { color: inherit; }
+
+/* El logo respira sobre un resplandor naranja, como en las portadas del manual */
+.hero .mark { background: radial-gradient(120% 90% at 50% 105%, rgba(219,105,35,.35), rgba(219,105,35,0) 60%), radial-gradient(60% 50% at 18% 12%, rgba(240,170,40,.16), rgba(240,170,40,0) 70%), var(--panel); overflow: visible; }
+.hero .mark img { width: 66%; filter: drop-shadow(0 18px 40px rgba(219,105,35,.28)); }
+@media (max-width: 820px) { .hero .mark img { width: 38%; } }
+.close .side img { width: min(250px, 62%); filter: drop-shadow(0 14px 30px rgba(219,105,35,.22)); }
+
+/* Pie con enlaces legales */
+.closefoot footer { align-items: flex-start; }
+.footcol { display: grid; gap: 6px; }
+.footlinks { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.footlinks a { text-decoration: none; font-weight: 700; color: var(--cream-ink); border-bottom: 1.5px solid var(--accent); padding-bottom: 1px; }
+.footlinks a:hover { color: var(--accent); }
+.consent { margin-top: 14px; font-size: 12px; color: var(--cream-mut); max-width: 52ch; line-height: 1.6; }
+.consent a { color: var(--cream-ink); font-weight: 700; text-underline-offset: 3px; }
+
+.close .side .sticker { top: -34px; right: -6px; }
+@media (max-width: 820px) { .close .side .sticker { top: -20px; right: 8px; } }
